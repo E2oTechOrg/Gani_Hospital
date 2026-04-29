@@ -45,7 +45,7 @@ const data = {
     ctscan: {
         title: "CT Scan",
         badge: "CT SCAN",
-        img: "images/service/ct.jpg",
+        img: "images/service/scan.webp",
         stat1: { value: "128-Slice", label: "High-Res Scanner" },
         stat2: { value: "<30 min", label: "Report Turnaround" },
         stat3: { value: "10,000+", label: "Scans Completed" },
@@ -65,7 +65,7 @@ const data = {
     lab: {
         title: "Laboratory Services",
         badge: "DIAGNOSTICS LAB",
-        img: "images/about/about-lab.webp",
+        img: "images/service/lab.webp",
 
         stat1: { value: "10K+", label: "Tests Conducted" },
         stat2: { value: "99%", label: "Accuracy Rate" },
@@ -85,30 +85,12 @@ const data = {
 
     },
 
-    diagnosis: {
-        title: "Diagnosis",
-        badge: "DIAGNOSIS",
-        img: "images/service/service-6.jpg",
-        stat1: { value: "200+", label: "Tests Available" },
-        stat2: { value: "Same Day", label: "Digital Reports" },
-        stat3: { value: "NABL", label: "Accredited Lab" },
-        about: "Accurate diagnosis is the foundation of effective treatment. Our Diagnostic Services division combines cutting-edge laboratory technology with the expertise of experienced pathologists. From routine blood panels to advanced molecular diagnostics, we deliver precise, timely results that empower well-informed healthcare decisions.",
-        facilities: "Our NABL-accredited diagnostic laboratory offers a wide range of tests including hematology, biochemistry, microbiology, and molecular diagnostics. Equipped with automated analyzers and modern technology, we ensure accurate and quick results. Patients also benefit from home sample collection, same-day digital reports, and specialist consultation for interpretation.",
-        facilityItems: [
-            "Complete Blood Count & Biochemistry",
-            "Microbiology & Culture Tests",
-            "Histopathology & Cytology",
-            "Molecular Diagnostics & PCR",
-            "Full Body Health Checkup Packages",
-            "Home Sample Collection Service"
-        ],
 
-    },
 
     pharmacy: {
         title: "Pharmacy Services",
         badge: "HOSPITAL PHARMACY",
-        img: "images/service/service-pharmacy.jpg",
+        img: "images/service/pharmacy.jpg",
 
         stat1: { value: "24/7", label: "Medicine Availability" },
         stat2: { value: "5K+", label: "Prescriptions Served" },
@@ -126,7 +108,26 @@ const data = {
             "Patient Medication Counselling",
             "Online & Repeat Prescription Support"
         ]
-    }
+    },
+
+    bloodbank: {
+        title: "Blood Bank",
+        badge: "BLOOD BANK",
+        img: "images/service/blood.webp",
+        stat1: { value: "24/7", label: "Blood Availability" },
+        stat2: { value: "All Types", label: "Blood Groups" },
+        stat3: { value: "100%", label: "Safe & Screened" },
+        about: "Our Blood Bank is a licensed and fully equipped unit dedicated to the safe collection, storage, testing, and transfusion of blood and blood components. Managed by trained transfusion medicine specialists, we ensure that every unit of blood meets the highest safety and quality standards — providing a reliable supply for surgeries, emergencies, and chronic care patients at all times.",
+        facilities: "Our blood bank is equipped with modern refrigeration systems, component separation technology, and automated blood screening equipment. We maintain a continuous supply of all blood groups including rare types, and offer platelet, plasma, and packed red cell components. Strict crossmatching, infectious disease screening, and quality control protocols are followed for every unit.",
+        facilityItems: [
+            "24/7 Blood & Component Availability",
+            "All Blood Group Types Stocked",
+            "Infectious Disease Screening (HIV, HBV, HCV)",
+            "Platelet & Plasma Component Separation",
+            "Emergency Blood Transfusion Support",
+            "Voluntary Blood Donation Drives"
+        ],
+    },
 };
 
 function renderPage(d) {
