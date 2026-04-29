@@ -454,7 +454,7 @@ a:focus {
 }
 
 .navbar-brand img {
-  height: 35px
+  height: 55px
 }
 
 .dropdown .dropdown-menu {
@@ -2237,9 +2237,9 @@ a:focus {
   font-size: 20px;
 }
 
-.footer-btm {
+/* .footer-btm {
   border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
+} */
 
 .footer-socials li a {
   width: 45px;
@@ -2776,6 +2776,30 @@ a:focus {
   font-size: 12px;
   color: #e12454;
   font-weight: 600;
+}
+
+/* Mute / Unmute button */
+.mute-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s ease;
+}
+
+.mute-btn:hover {
+  background: rgba(225, 36, 84, 0.85);
 }
 
 /* Responsive */

@@ -434,26 +434,104 @@ loadComponent("footer-container", "footer.html");
 	// Video 
 
 	/* =============================================
-   SHORTS VIDEO — Hover to Play
-   Add to your js/script.js or a separate file
+   SHORTS VIDEO 
 ============================================== */
+	
+		document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".shorts-card");
 
-	document.querySelectorAll(".shorts-card").forEach(function (card) {
-		const video = card.querySelector("video");
-		const overlay = card.querySelector(".shorts-overlay");
+		function isInView(el) {
+      const rect = el.getBoundingClientRect();
+		return rect.top < window.innerHeight * 0.85 && rect.bottom > 0;
+    }
 
+		function handleScroll() {
+			cards.forEach(function (card) {
+				const video = card.querySelector("video");
+
+				if (card.dataset.manualPause === "true") return;
+
+				if (isInView(card)) {
+					video.play().catch(function () { });
+					card.classList.add("playing");
+				} else {
+					video.pause();
+					card.classList.remove("playing");
+				}
+			});
+    }
+
+		function handleScrollReset() {
+			cards.forEach(function (card) {
+				const video = card.querySelector("video");
+				if (!isInView(card)) {
+					card.dataset.manualPause = "false";
+					video.pause();
+					card.classList.remove("playing");
+				}
+			});
+    }
+
+		cards.forEach(function (card) {
+      const video = card.querySelector("video");
+		const muteBtn = card.querySelector(".mute-btn");
+		const muteIcon = muteBtn.querySelector("i");
+
+		// ✅ Play / Pause on card click
 		card.addEventListener("click", function () {
-			if (video.paused) {
-				video.play().catch(function (e) {
-					console.log("Play blocked:", e);
-				});
-				card.classList.add("playing");
-			} else {
-				video.pause();
-				card.classList.remove("playing");
-			}
-		});
-	});
+        if (video.paused) {
+			card.dataset.manualPause = "false";
+		video.play().catch(function () { });
+		card.classList.add("playing");
+        } else {
+			card.dataset.manualPause = "true";
+		video.pause();
+		card.classList.remove("playing");
+        }
+      });
+
+		// ✅ Mute / Unmute button — stop click bubbling to card
+		muteBtn.addEventListener("click", function (e) {
+			e.stopPropagation(); // prevent card click (play/pause) from firing
+
+		if (video.muted) {
+			// Unmute this card, mute all others
+			cards.forEach(function (otherCard) {
+				const otherVideo = otherCard.querySelector("video");
+				const otherBtn = otherCard.querySelector(".mute-btn i");
+				otherVideo.muted = true;
+				otherBtn.className = "icofont-volume-off";
+			});
+
+		video.muted = false;
+		muteIcon.className = "icofont-volume-up";
+        } else {
+			video.muted = true;
+		muteIcon.className = "icofont-volume-off";
+        }
+      });
+
+		// ✅ Auto-mute when card scrolls out of view
+		const observer = new IntersectionObserver(function (entries) {
+			entries.forEach(function (entry) {
+				if (!entry.isIntersecting) {
+					video.muted = true;
+					muteIcon.className = "icofont-volume-off";
+				}
+			});
+      }, {threshold: 0.2 });
+
+		observer.observe(card);
+    });
+
+		window.addEventListener("scroll", function () {
+			handleScroll();
+		handleScrollReset();
+    });
+
+		handleScroll();
+  });
+	
 
 	// ******** MAP
 	var map;
