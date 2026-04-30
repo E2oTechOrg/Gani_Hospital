@@ -391,7 +391,7 @@ a:focus {
 }
 
 .section-title {
-  margin-bottom: 70px;
+  margin-bottom: 10px;
 }
 
 .section-title h2 {
@@ -619,6 +619,250 @@ a:focus {
   background: #e12454;
 }
 
+/* ===== BLOG SECTION ===== */
+.blog-section {
+  padding: 56px 20px;
+  background: #f4f7fa;
+  text-align: center;
+}
+
+.blog-tag-line {
+  display: inline-block;
+  background: #fff0f3;
+  color: #e12454;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 20px;
+  border: 1px solid #f5b8c8;
+  margin-bottom: 10px;
+}
+
+.section-divider {
+  width: 44px;
+  height: 3px;
+  background: #e12454;
+  border-radius: 2px;
+  margin: 10px auto 10px;
+}
+
+.section-subtitle {
+  color: #607d8b;
+  font-size: 13px;
+  margin-bottom: 32px;
+}
+
+.blog-wrapper {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 48px;
+}
+
+.blog-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 4px 18px;
+  scrollbar-width: none;
+}
+
+.blog-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.blog-card {
+  min-width: 240px;
+  max-width: 240px;
+  flex: 0 0 auto;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e8eef2;
+  overflow: hidden;
+  transition: transform .22s, box-shadow .22s;
+  text-align: left;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(12, 58, 69, .12);
+}
+
+.bc-img {
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bc-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s;
+}
+
+.blog-card:hover .bc-img img {
+  transform: scale(1.05);
+}
+
+.pregnancy-bg {
+  background: #fff0f3;
+}
+
+.kids-bg {
+  background: #e1f5ee;
+}
+
+.surgery-bg {
+  background: #eeedfe;
+}
+
+.bc-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.badge-pregnancy {
+  background: #e12454;
+}
+
+.badge-kids {
+  background: #0f6e56;
+}
+
+.badge-surgery {
+  background: #534ab7;
+}
+
+.bc-body {
+  padding: 12px 14px 14px;
+}
+
+.bc-body h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0c3a45;
+  line-height: 1.5;
+  min-height: 58px;
+  margin-bottom: 10px;
+}
+
+.bc-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f0f4f6;
+  padding-top: 9px;
+}
+
+.bc-time {
+  font-size: 11px;
+  color: #90a4ae;
+}
+
+.bc-link {
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: letter-spacing .18s;
+}
+
+.bc-link:hover {
+  letter-spacing: 0.3px;
+}
+
+.link-pregnancy {
+  color: #e12454;
+}
+
+.link-kids {
+  color: #0f6e56;
+}
+
+.link-surgery {
+  color: #534ab7;
+}
+
+.blog-btn {
+  position: absolute;
+  top: 46%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background: #0c3a45;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s, transform .2s;
+  z-index: 10;
+}
+
+.blog-btn:hover {
+  background: #e12454;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.prev-btn {
+  left: 4px;
+}
+
+.next-btn {
+  right: 4px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 18px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #dde4e9;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+
+.dot.active {
+  background: #e12454;
+  transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+  .blog-wrapper {
+    padding: 0 8px;
+  }
+
+  .prev-btn,
+  .next-btn {
+    display: none;
+  }
+
+  .blog-card {
+    min-width: 210px;
+    max-width: 210px;
+  }
+}
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 992px) {
