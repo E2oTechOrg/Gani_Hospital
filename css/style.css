@@ -20,6 +20,7 @@ body {
   font-size: 16px;
   color: #6F8BA4;
   font-weight: 400;
+  padding-top: 50px;
 }
 
 h1,
@@ -699,9 +700,7 @@ a:focus {
   font-size: 14.5px;
   line-height: 1.70;
   color: #5c7190;
-  background: #f4f8ff;
   border-radius: 8px;
-  border-left: 3px solid #e12454;
 }
 
 .about-block-item ul li::before {
@@ -2189,10 +2188,16 @@ a:focus {
 /* ************ Footer ******************** */
 .footer {
   padding-bottom: 10px;
+  background-color: #d9dfeb;
+  color: black;
 }
 
 .footer .copyright a {
   font-weight: 600;
+}
+
+.footer .copyright span{
+  color: #e12454;
 }
 
 .lh-35 {
@@ -2202,6 +2207,10 @@ a:focus {
 .logo {
   font-weight: 600;
   letter-spacing: 1px;
+}
+
+.logo img {
+  width: 120px;
 }
 
 .logo h3 {
@@ -2244,14 +2253,15 @@ a:focus {
 .footer-socials li a {
   width: 45px;
   height: 45px;
-  background: #6F8BA4;
-  color: #fff;
+  color: #6F8BA4;
   display: inline-block;
   text-align: center;
   border-radius: 100%;
   padding-top: 12px;
 }
-
+.footer-socials li a:hover{
+  color: #e12454;
+}
 .widget-contact h6 {
   font-weight: 500;
   margin-bottom: 18px;
@@ -2660,7 +2670,7 @@ a:focus {
   letter-spacing: 1.8px;
   text-transform: uppercase;
   color: #e12454;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .shorts-bar {
@@ -2668,7 +2678,7 @@ a:focus {
   height: 3px;
   background: #e12454;
   border-radius: 3px;
-  margin: 12px auto 16px;
+  margin: 6px auto 10px;
 }
 
 .shorts-section>.container>.row>.col-lg-6>p {
