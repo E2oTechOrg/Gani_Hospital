@@ -674,10 +674,12 @@ a:focus {
   display: none;
 }
 
+/* Show exactly first 3 cards */
 .blog-card {
-  min-width: 240px;
-  max-width: 240px;
-  flex: 0 0 auto;
+  min-width: calc((100% - 40px) / 3);
+  max-width: calc((100% - 40px) / 3);
+  flex: 0 0 calc((100% - 40px) / 3);
+  
   background: #fff;
   border-radius: 14px;
   border: 1px solid #e8eef2;
@@ -692,7 +694,7 @@ a:focus {
 }
 
 .bc-img {
-  height: 150px;
+  height: 180px;
   position: relative;
   overflow: hidden;
 }
