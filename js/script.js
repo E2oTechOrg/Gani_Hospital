@@ -215,6 +215,27 @@ loadComponent("footer-container", "footer.html");
 	});
 
 
+// Scroll animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.fade-up, .fade-left, .fade-right')
+  .forEach(el => observer.observe(el));
+
+
+// Show banner immediately on load
+// window.addEventListener("load", () => {
+//   document.querySelectorAll('.fade-left, .fade-up, .fade-right')
+//     .forEach(el => el.classList.add('show'));
+// });
+
+
+
 
 
 	// *********** Department ******************
