@@ -42,38 +42,42 @@
 }
 </script>
 <style>
-/* SAME STYLE - reused */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.8;
-  color: #222;
-  margin: 0;
-}
 
+/* SAFE SCOPED BLOG STYLE */
 .blog-container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 40px auto;
   padding: 20px;
   margin-top: 100px;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  color: #222;
 }
 
-.blog-header { text-align: center; }
+/* HEADER */
+.blog-header {
+  text-align: center;
+}
 
 .blog-header h1 {
-  font-size: 30px;
+  font-size: 32px;
+  color: #0c3a45;
 }
 
 .meta {
-  color: #777;
+  color: #666;
   font-size: 14px;
 }
 
+/* IMAGE */
 .hero-img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
+  margin: 15px 0;
 }
 
-h2 {
+/* HEADINGS */
+.blog-container h2 {
   margin-top: 35px;
   color: #0c3a45;
   font-size: 22px;
@@ -81,30 +85,31 @@ h2 {
   padding-left: 10px;
 }
 
-h3 { margin-top: 20px; }
+.blog-container h3 {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #1f2937;
+}
 
-p { font-size: 16px; }
+/* BOX STYLE */
+.card-box {
+  background: #f8fbfc;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin-top: 15px;
+}
 
+/* LIST */
 ul {
   padding-left: 20px;
 }
-.blog-container a {
-  text-decoration: underline;
-  color: skyblue;
+
+li {
+  margin-bottom: 6px;
 }
 
-.blog-container a:hover {
-  color: skyblue;
-  text-decoration: underline;
-}
-
-.faq {
-  background: #f6f6f6;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 40px;
-}
-
+/* BACK BUTTON */
 .back-btn {
   display: inline-block;
   margin-bottom: 15px;
@@ -112,15 +117,31 @@ ul {
   border: 1px solid #0c3a45;
   border-radius: 20px;
   font-size: 13px;
-  background: transparent !important;
-  color: #0c3a45 !important;
-  text-decoration: none !important;
+  background: transparent;
+  color: #0c3a45;
+  text-decoration: none;
 }
+
 .back-btn:hover {
-  background: #0c3a45 !important;
-  color: #fff !important;
-  text-decoration: none !important;
+  background: #0c3a45;
+  color: #fff;
 }
+
+/* FAQ */
+.faq {
+  background: #eef6f8;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #0c3a45;
+  margin-top: 40px;
+}
+
+/* IMPORTANT FIX (prevents navbar issue) */
+.blog-container img {
+  max-width: 100%;
+  height: auto;
+}
+
 </style>
 </head>
 
@@ -132,200 +153,182 @@ ul {
 
 <a href="index.html#blogSection" class="back-btn">← Back to Blogs</a>
 
-<div class="blog-header">
-  <h1>Child Vaccination Schedule</h1>
-  <p class="intro">
-    A complete guide to your child’s vaccination schedule from birth to 5 years to ensure strong immunity and protection.
-  </p>
-  <div class="meta">Updated April 2026 • 7 min read</div>
-</div>
+<h1>Child Vaccination Schedule (Birth to 5 Years)</h1>
 
-<img src="images/blog/kids.jpg" alt="child vaccination schedule" class="hero-img">
+<p class="intro">
+A complete, doctor-approved guide to child vaccination schedule in India covering essential vaccines, benefits, safety, and expert pediatric care.
+</p>
+
+<img src="images/blog/kids.webp" alt="child vaccination schedule India">
 
 <h2>Introduction</h2>
 
+<div class="card-box">
+
 <p>
-A proper <strong>child vaccination schedule</strong> is essential to protect your child from serious and life-threatening diseases. 
-Vaccines help build strong immunity from birth and ensure healthy growth during the early years of life.
+Vaccination is one of the most important steps in protecting your child from life-threatening diseases. A proper <strong>child vaccination schedule</strong> ensures immunity is built at the right time during early childhood.
 </p>
 
 <p>
-From birth to 5 years, your child requires multiple vaccines at specific intervals. 
-Following the correct <strong>immunization schedule for babies</strong> ensures timely protection against infections like polio, measles, hepatitis, and more.
+At <strong>Gani Hospital</strong>, we follow safe, government-approved immunization schedules recommended by pediatric experts.
 </p>
-
-<h2>Why Vaccination is Important for Children</h2>
 
 <p>
-Vaccination is one of the most effective ways to prevent diseases. It not only protects your child but also helps protect the community by reducing the spread of infections.
+From birth to 5 years, vaccines protect children from infections like polio, hepatitis, measles, tuberculosis, diphtheria, and more.
 </p>
+
+</div>
+
+<h2>Why Vaccination is Important</h2>
+
+<div class="card-box">
 
 <ul>
-<li>Prevents serious diseases like measles, polio, and tuberculosis</li>
-<li>Strengthens immune system naturally</li>
-<li>Reduces hospitalization and medical costs</li>
-<li>Ensures long-term health and development</li>
+<li>Protects from deadly childhood diseases</li>
+<li>Builds strong immune system</li>
+<li>Prevents outbreaks in community</li>
+<li>Reduces hospitalization risk</li>
+<li>Supports healthy growth & development</li>
 </ul>
 
-<h2>Complete Child Vaccination Schedule (0 to 5 Years)</h2>
+</div>
 
-<p>
-Below is a general <strong>baby vaccination chart</strong> followed by most pediatricians. Always consult your doctor for a personalized schedule.
-</p>
+<h2>Complete Vaccination Schedule (0–5 Years)</h2>
+
+<div class="card-box">
 
 <h3>At Birth</h3>
 <ul>
-<li>BCG – protects against tuberculosis</li>
-<li>OPV – protects against polio</li>
-<li>Hepatitis B – protects liver from infection</li>
+<li>BCG – Tuberculosis protection</li>
+<li>OPV – Polio prevention</li>
+<li>Hepatitis B – Liver infection protection</li>
 </ul>
 
 <h3>6 Weeks</h3>
 <ul>
-<li>DTP – protects against diphtheria, tetanus, and pertussis</li>
-<li>IPV – polio protection</li>
-<li>Hib – prevents brain infections</li>
-<li>Rotavirus – protects against diarrhea</li>
+<li>DTP – Diphtheria, Tetanus, Pertussis</li>
+<li>IPV – Polio protection</li>
+<li>Hib – Brain infection prevention</li>
+<li>Rotavirus – Diarrhea protection</li>
 </ul>
 
-<h3>10 Weeks</h3>
+<h3>10–14 Weeks</h3>
 <ul>
-<li>Second dose of DTP</li>
-<li>IPV and Hib continuation</li>
-</ul>
-
-<h3>14 Weeks</h3>
-<ul>
-<li>Third dose of DTP</li>
-<li>Final primary doses of IPV and Hib</li>
+<li>Booster doses of DTP, IPV, Hib</li>
 </ul>
 
 <h3>6 Months</h3>
 <ul>
-<li>Hepatitis B final dose</li>
-<li>Influenza vaccine (recommended yearly)</li>
+<li>Hepatitis B completion</li>
+<li>Influenza vaccine</li>
 </ul>
 
-<h3>9 Months</h3>
+<h3>9–12 Months</h3>
 <ul>
 <li>MMR (Measles, Mumps, Rubella)</li>
 </ul>
 
-<h3>12–15 Months</h3>
+<h3>1–2 Years</h3>
 <ul>
-<li>MMR booster</li>
 <li>Chickenpox vaccine</li>
 <li>Hepatitis A</li>
-</ul>
-
-<h3>16–24 Months</h3>
-<ul>
 <li>DTP booster</li>
-<li>Polio booster</li>
 </ul>
 
 <h3>4–5 Years</h3>
 <ul>
-<li>Final DTP booster</li>
-<li>MMR booster</li>
+<li>Final booster doses (DTP & MMR)</li>
 </ul>
 
-<h2>Care Tips After Vaccination</h2>
+</div>
+
+<h2>Benefits of Timely Vaccination</h2>
+
+<div class="card-box">
 
 <p>
-After vaccination, it is normal for children to experience mild discomfort. Proper care helps reduce side effects and keeps your child comfortable.
+Following the correct vaccination schedule ensures long-term protection and reduces risk of serious illness.
 </p>
 
 <ul>
-<li>Apply cold compress to reduce swelling</li>
-<li>Give plenty of fluids</li>
-<li>Allow rest and sleep</li>
-<li>Follow doctor’s advice for fever medication</li>
+<li>Strong immunity development</li>
+<li>Protection from infections early in life</li>
+<li>Better school health readiness</li>
+<li>Reduced future medical complications</li>
 </ul>
 
-<h2>Common Side Effects of Vaccines</h2>
+</div>
 
-<p>
-Most vaccine side effects are mild and temporary.
-</p>
+<h2>Side Effects (Normal & Temporary)</h2>
+
+<div class="card-box">
 
 <ul>
-<li>Low-grade fever</li>
-<li>Pain or redness at injection site</li>
-<li>Irritability or crying</li>
-<li>Loss of appetite</li>
+<li>Mild fever</li>
+<li>Swelling at injection site</li>
+<li>Irritability</li>
+<li>Reduced appetite</li>
 </ul>
 
-<p>
-These symptoms usually disappear within 24–48 hours.
-</p>
+<p>These effects usually disappear within 24–48 hours.</p>
 
+</div>
 
-<h2>When to See a Doctor</h2>
+<h2> When to See a Doctor</h2>
 
-<p>
-Although rare, some reactions need medical attention:
-</p>
+<div class="card-box">
 
 <ul>
 <li>High fever above 102°F</li>
-<li>Severe swelling or redness</li>
-<li>Persistent crying for hours</li>
-<li>Allergic reactions (rash, breathing difficulty)</li>
+<li>Severe allergic reaction</li>
+<li>Continuous crying</li>
+<li>Breathing difficulty</li>
 </ul>
 
+</div>
 
-<h2>Tips for Parents</h2>
+<h2>Expert Vaccination Care at Gani Hospital</h2>
 
-<ul>
-<li>Maintain a vaccination record card</li>
-<li>Never skip scheduled doses</li>
-<li>Consult pediatrician regularly</li>
-<li>Follow proper nutrition and hygiene</li>
-</ul>
-
-<h2>Vaccination Schedule in India</h2>
+<div class="card-box">
 
 <p>
-In India, the vaccination schedule is recommended by pediatricians based on guidelines from WHO and the Government of India. 
-Parents should ensure timely vaccination as per the national immunization program.
+At <strong>Gani Hospital</strong>, we provide complete pediatric vaccination services with safe handling, proper scheduling, and expert guidance.
+</p>
+
+<ul>
+<li>Experienced pediatricians</li>
+<li>WHO-approved vaccines</li>
+<li>Safe immunization process</li>
+<li>Child-friendly care environment</li>
+</ul>
+
+</div>
+
+<h2> Conclusion</h2>
+
+<div class="card-box">
+
+<p>
+Following a proper child vaccination schedule is one of the best ways to ensure lifelong health protection. Timely vaccines, regular checkups, and pediatric guidance help children grow safely and strongly.
 </p>
 
 <p>
-Private hospitals may include additional vaccines like pneumococcal and rotavirus for better protection.
-</p>   
-
-<h2>Trusted Resources</h2>
-
-<ul>
-<li><a href="https://www.who.int" target="_blank">WHO Vaccination Guidelines</a></li>
-<li><a href="https://www.cdc.gov/vaccines" target="_blank">CDC Immunization Schedule</a></li>
-<li><a href="https://www.nhs.uk" target="_blank">NHS Vaccination Guide</a></li>
-</ul>
-
-
-<h2>Conclusion</h2>
-
-<p>
-Following a proper <strong>child vaccination schedule</strong> is one of the best ways to ensure your child grows up healthy and protected from diseases. 
-Timely immunization, proper care, and regular checkups will give your child a strong foundation for life.
+For expert child healthcare and vaccination services in Ramanathapuram, visit <strong>Gani Hospital</strong>.
 </p>
 
+</div>
+
+<h2> FAQ</h2>
 
 <div class="faq">
-<h2>Frequently Asked Questions</h2>
 
-<p><strong>Is vaccination safe for children?</strong><br>
-Yes, vaccines are tested and safe.</p>
+<p><strong>Is vaccination mandatory?</strong><br>Yes, it is highly recommended for child safety.</p>
 
-<p><strong>Can vaccines be delayed?</strong><br>
-It is not recommended. Follow the schedule strictly.</p>
+<p><strong>Can vaccines be delayed?</strong><br>Delays are not recommended unless advised by a doctor.</p>
 
-<p><strong>Are side effects normal?</strong><br>
-Yes, mild side effects are common and temporary.</p>
+<p><strong>Are vaccines safe?</strong><br>Yes, they are tested and approved for child safety.</p>
 
-<p><strong>Do vaccines protect for life?</strong><br>
-Some require booster doses for long-term protection.</p>
+<p><strong>Do all children need same vaccines?</strong><br>Most follow standard schedule, but doctors may customize.</p>
 
 </div>
 
