@@ -786,6 +786,10 @@ a:focus {
   background: #eeedfe;
 }
 
+.child-bg {
+  background: #e8f4ff;
+}
+
 .bc-badge {
   position: absolute;
   top: 10px;
@@ -809,6 +813,9 @@ a:focus {
 
 .badge-surgery {
   background: #534ab7;
+}
+.badge-child {
+  background: #1d6fd6;
 }
 
 .bc-body {
@@ -858,6 +865,24 @@ a:focus {
 
 .link-surgery {
   color: #534ab7;
+}
+.link-child {
+  color: #1d6fd6;
+}
+.diabetes-bg{
+	background: #e8f5e9;
+}
+
+.badge-diabetes{
+	background: #2e7d32;
+	color: #fff;
+	padding: 4px 10px;
+	border-radius: 12px;
+	
+}
+
+.link-diabetes{
+	color: #2e7d32;
 }
 
 .blog-btn {
