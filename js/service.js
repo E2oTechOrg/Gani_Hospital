@@ -3,131 +3,143 @@ const service = params.get("service");
 
 const data = {
 
-    child: {
-        title: "Child Care",
-        badge: "CHILD CARE",
-        img: "images/about/about1.webp",
-        stat1: { value: "24/7", label: "Pediatric Support" },
-        stat2: { value: "12+", label: "Specialist Doctors" },
-        stat3: { value: "5000+", label: "Children Treated" },
-        about: "Our Child Care department is dedicated to the holistic health and well-being of children from infancy through adolescence. Led by experienced pediatricians, we provide evidence-based care tailored to each child's unique developmental stage — ensuring early detection, timely intervention, and continuous health monitoring throughout their growth journey.",
-        facilities: "Our pediatric department is designed to provide a safe, child-friendly environment with advanced medical infrastructure. We have dedicated vaccination clinics, growth assessment units, neonatal intensive care (NICU), and emergency pediatric support available 24/7. The unit also includes play therapy areas, nutrition counseling centers, and child psychology support to ensure both physical and emotional well-being of children.",
+    pregnancy: {
+        title: "Pregnancy Care",
+        badge: "MATERNITY CARE",
+        img: "images/blog/ultrasound.webp",
+
+        stat1: { value: "24/7", label: "Mother Care" },
+        stat2: { value: "1000+", label: "Deliveries Handled" },
+        stat3: { value: "15+", label: "Years Experience" },
+
+        about: "Our Pregnancy Care department offers complete maternity support from early pregnancy to safe delivery and postnatal recovery. We focus on mother and baby wellness through expert gynecologists, regular monitoring, and compassionate care.",
+
+        facilities: "We provide antenatal checkups, fetal growth scans, nutrition counseling, high-risk pregnancy management, labor room support, normal delivery assistance, and post-delivery care in a safe and modern environment.",
+
         facilityItems: [
-            "Vaccination & Immunisation Programs",
-            "Growth & Development Monitoring",
-            "Nutrition & Diet Counseling",
-            "24/7 Emergency Pediatric Care",
-            "Neonatal Intensive Care Unit (NICU)",
-            "Child Psychology & Behavioral Support"
-        ],
-
+            "Regular Antenatal Checkups",
+            "Pregnancy Scans & Monitoring",
+            "High-Risk Pregnancy Care",
+            "Normal Delivery Support",
+            "Postnatal Mother Care",
+            "Baby Wellness Guidance"
+        ]
     },
 
-    personal: {
-        title: "Personal Care",
-        badge: "PERSONAL CARE",
-        img: "images/about/about2.jpeg",
-        stat1: { value: "100%", label: "Patient-Centred" },
-        stat2: { value: "Daily", label: "Consultations" },
-        stat3: { value: "3000+", label: "Patients Served" },
-        about: "Our Personal Care services are built around the belief that every patient deserves individualised attention and a care plan designed specifically for their needs. We combine thorough clinical assessments with compassionate support to ensure comfort, safety, and effective outcomes at every stage of treatment.",
-        facilities: "Our personal care services include fully customized treatment plans supported by modern consultation rooms and telemedicine facilities. Patients receive continuous monitoring through regular follow-ups, home care services, and digital health tracking. We also offer rehabilitation programs, wellness counseling, and preventive health screenings to maintain long-term health and comfort.", facilityItems: [
-            "Customised Treatment Plans",
-            "Home Care Support Services",
-            "Regular Health Monitoring",
-            "In-Clinic & Teleconsultation",
-            "Post-Treatment Rehabilitation",
-            "Wellness & Preventive Checkups"
-        ],
+    kids: {
+        title: "Kids Care",
+        badge: "PEDIATRIC CARE",
+        img: "images/department/Paediatrics.webp",
 
+        stat1: { value: "24/7", label: "Child Support" },
+        stat2: { value: "5000+", label: "Children Treated" },
+        stat3: { value: "12+", label: "Specialists" },
+
+        about: "Our Kids Care department provides specialized treatment for newborns, infants, and children. We focus on preventive care, growth monitoring, vaccinations, and treatment of childhood illnesses in a child-friendly environment.",
+
+        facilities: "The pediatric unit includes vaccination clinics, child emergency care, nutrition counseling, developmental assessments, fever care, infection treatment, and regular child wellness consultations.",
+
+        facilityItems: [
+            "Vaccination Programs",
+            "Growth Monitoring",
+            "Child Emergency Care",
+            "Nutrition Guidance",
+            "Infant Health Checkups",
+            "Pediatric Consultation"
+        ]
     },
 
-    ctscan: {
-        title: "CT Scan",
-        badge: "CT SCAN",
+    surgery: {
+        title: "Advanced Surgeries",
+        badge: "LAPAROSCOPY & SURGERY",
+        img: "images/blog/hospital-bag-surgery.webp",
+
+        stat1: { value: "3000+", label: "Surgeries Done" },
+        stat2: { value: "Less Pain", label: "Modern Methods" },
+        stat3: { value: "Fast", label: "Recovery Time" },
+
+        about: "Gani Hospitals is known for advanced laparoscopic and general surgeries with modern surgical techniques. Our expert surgeons ensure safe treatment, minimal pain, small incisions, and faster recovery.",
+
+        facilities: "We perform appendix surgery, gallbladder surgery, hernia repair, piles treatment, diagnostic laparoscopy, emergency surgeries, and other general procedures using advanced equipment.",
+
+        facilityItems: [
+            "Laparoscopic Surgery",
+            "Appendix Surgery",
+            "Gallbladder Surgery",
+            "Hernia Repair",
+            "Piles Treatment",
+            "Emergency Surgeries"
+        ]
+    },
+
+    scan: {
+        title: "Scan & Imaging",
+        badge: "DIAGNOSTIC SCAN",
         img: "images/service/scan.webp",
-        stat1: { value: "128-Slice", label: "High-Res Scanner" },
-        stat2: { value: "<30 min", label: "Report Turnaround" },
-        stat3: { value: "10,000+", label: "Scans Completed" },
-        about: "Our CT Scan department is equipped with state-of-the-art imaging technology to deliver fast, precise, and reliable diagnostic results. Our advanced systems capture detailed cross-sectional images of the body, enabling specialist radiologists to detect conditions at the earliest stage with exceptional accuracy.",
-        facilities: "The CT Scan unit is equipped with a 128-slice high-resolution scanner designed for fast and accurate imaging with minimal radiation exposure. We use advanced PACS technology for instant image processing and secure digital report sharing. The department also offers contrast studies, angiography scans, and specialist radiologist consultation for precise diagnosis.",
-        facilityItems: [
-            "128-Slice High-Resolution CT Scanner",
-            "Full-Body & Targeted Imaging",
-            "Contrast-Enhanced CT Angiography",
-            "PACS Digital Report System",
-            "Radiation-Minimised Protocols",
-            "Expert Radiologist Interpretation"
-        ],
 
+        stat1: { value: "Fast", label: "Reports" },
+        stat2: { value: "Modern", label: "Equipment" },
+        stat3: { value: "Accurate", label: "Diagnosis" },
+
+        about: "Our Scan & Imaging department provides accurate diagnostic imaging using modern scanning systems for quick and reliable medical decisions.",
+
+        facilities: "We offer ultrasound scans, pregnancy scans, abdominal scans, pelvic scans, and other imaging services with expert radiology support.",
+
+        facilityItems: [
+            "Ultrasound Scan",
+            "Pregnancy Scan",
+            "Abdominal Scan",
+            "Pelvic Scan",
+            "Digital Reports",
+            "Expert Radiology Support"
+        ]
     },
 
     lab: {
         title: "Laboratory Services",
-        badge: "DIAGNOSTICS LAB",
+        badge: "DIAGNOSTIC LAB",
         img: "images/service/lab.webp",
 
-        stat1: { value: "10K+", label: "Tests Conducted" },
-        stat2: { value: "99%", label: "Accuracy Rate" },
-        stat3: { value: "24/7", label: "Service Availability" },
+        stat1: { value: "10K+", label: "Tests Done" },
+        stat2: { value: "99%", label: "Accuracy" },
+        stat3: { value: "Daily", label: "Reports" },
 
-        about: "Our Laboratory Services department provides comprehensive diagnostic solutions with high precision and reliability. Equipped with modern technology and managed by experienced pathologists and technicians, we ensure timely and accurate test results to support effective medical decisions and patient care.",
+        about: "Our Laboratory Services provide reliable diagnostic testing with modern equipment and trained technicians for fast and accurate results.",
 
-        facilities: "Our laboratory is equipped with fully automated analyzers, advanced diagnostic tools, and strict quality control systems. We offer a wide range of tests including blood tests, urine analysis, microbiology, and pathology services. With quick turnaround times and digital reporting, patients receive fast and dependable results.",
-
-        facilityItems: [
-            "Complete Blood Count (CBC)",
-            "Biochemistry & Hormone Analysis",
-            "Microbiology & Culture Tests",
-            "Digital & Online Report Access",
-            "Home Sample Collection Service"
-        ],
-
-    },
-
-
-
-    pharmacy: {
-        title: "Pharmacy Services",
-        badge: "HOSPITAL PHARMACY",
-        img: "images/service/pharmacy.jpg",
-
-        stat1: { value: "24/7", label: "Medicine Availability" },
-        stat2: { value: "5K+", label: "Prescriptions Served" },
-        stat3: { value: "100%", label: "Genuine Medicines" },
-
-        about: "Our Pharmacy Services ensure safe, reliable, and timely access to high-quality medicines for all patients. Managed by licensed pharmacists, we provide accurate dispensing, medication guidance, and support to help patients follow their prescriptions correctly and safely.",
-
-        facilities: "Our hospital pharmacy is fully stocked with a wide range of medicines, including emergency drugs, chronic care medications, and surgical supplies. We maintain strict quality standards, proper storage conditions, and digital inventory systems to ensure medicine availability at all times. Patients also benefit from prescription verification and expert pharmacist consultation.",
+        facilities: "We offer blood tests, urine tests, sugar tests, thyroid tests, infection screening, and complete health profile packages.",
 
         facilityItems: [
-            "24/7 Pharmacy Service",
-            "Prescription Verification & Dispensing",
-            "Availability of Emergency Medicines",
-            "Cold Storage for Sensitive Drugs",
-            "Patient Medication Counselling",
-            "Online & Repeat Prescription Support"
+            "Blood Test",
+            "Urine Analysis",
+            "Sugar Test",
+            "Thyroid Test",
+            "Health Packages",
+            "Quick Reports"
         ]
     },
 
-    bloodbank: {
-        title: "Blood Bank",
-        badge: "BLOOD BANK",
-        img: "images/service/blood.webp",
-        stat1: { value: "24/7", label: "Blood Availability" },
-        stat2: { value: "All Types", label: "Blood Groups" },
-        stat3: { value: "100%", label: "Safe & Screened" },
-        about: "Our Blood Bank is a licensed and fully equipped unit dedicated to the safe collection, storage, testing, and transfusion of blood and blood components. Managed by trained transfusion medicine specialists, we ensure that every unit of blood meets the highest safety and quality standards — providing a reliable supply for surgeries, emergencies, and chronic care patients at all times.",
-        facilities: "Our blood bank is equipped with modern refrigeration systems, component separation technology, and automated blood screening equipment. We maintain a continuous supply of all blood groups including rare types, and offer platelet, plasma, and packed red cell components. Strict crossmatching, infectious disease screening, and quality control protocols are followed for every unit.",
+    emergency: {
+        title: "Emergency Care",
+        badge: "24/7 EMERGENCY",
+        img: "images/blog/emergency.webp",
+
+        stat1: { value: "24/7", label: "Available" },
+        stat2: { value: "Fast", label: "Response" },
+        stat3: { value: "Expert", label: "Medical Team" },
+
+        about: "Our Emergency Care unit provides immediate treatment for accidents, fever, breathing issues, chest pain, injuries, and urgent medical conditions any time of the day.",
+
+        facilities: "We offer emergency doctor consultation, first aid, oxygen support, observation beds, trauma response, ambulance coordination, and critical stabilization care.",
+
         facilityItems: [
-            "24/7 Blood & Component Availability",
-            "All Blood Group Types Stocked",
-            "Infectious Disease Screening (HIV, HBV, HCV)",
-            "Platelet & Plasma Component Separation",
-            "Emergency Blood Transfusion Support",
-            "Voluntary Blood Donation Drives"
-        ],
-    },
+            "24/7 Doctor Availability",
+            "Emergency First Aid",
+            "Oxygen Support",
+            "Observation Beds",
+            "Trauma Care",
+            "Rapid Medical Response"
+        ]
+    }
 };
 
 function renderPage(d) {

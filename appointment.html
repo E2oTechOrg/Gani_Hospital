@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Book Appointment | Gani Hospital Ramanathapuram</title>
+
+<meta name="description"
+content="Book appointments at Gani Hospital Ramanathapuram with expert doctors and quality healthcare services.">
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="plugins/icofont/icofont.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* Entrance Animations */
+.fade-up{
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp 1s ease forwards;
+}
+
+.fade-left{
+    opacity:0;
+    transform:translateX(-50px);
+    animation:fadeLeft 1s ease forwards;
+}
+
+.fade-right{
+    opacity:0;
+    transform:translateX(50px);
+    animation:fadeRight 1s ease forwards;
+}
+
+.delay-1{animation-delay:.2s;}
+.delay-2{animation-delay:.4s;}
+.delay-3{animation-delay:.6s;}
+
+@keyframes fadeUp{
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeLeft{
+    to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes fadeRight{
+    to{opacity:1; transform:translateX(0);}
+}
+
+/* Card Hover */
+.appoinment-wrap{
+    transition:0.4s ease;
+}
+
+.appoinment-wrap:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,0.08);
+}
+
+/* Button */
+.btn-main{
+    transition:0.4s ease;
+}
+
+.btn-main:hover{
+    transform:scale(1.05);
+}
+
+/* Input */
+.form-control{
+    transition:0.3s ease;
+}
+
+.form-control:focus{
+    transform:scale(1.02);
+    box-shadow:0 0 0 3px rgba(34,94,255,0.08);
+}
+
+/* List Hover */
+.list-unstyled li{
+    transition:0.3s ease;
+}
+
+.list-unstyled li:hover{
+    padding-left:8px;
+    color:#223a66;
+}
+
+</style>
+
+</head>
+
+<body id="top">
+
+<div id="header-container"></div>
+
+<!-- Page Title -->
+<section class="page-title bg-1">
+<div class="overlay"></div>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="block text-center fade-up">
+<span class="text-white">Book Your Seat</span>
+<h1 class="text-capitalize mb-5 text-lg">Appointment</h1>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Appointment -->
+<section class="appoinment section">
+<div class="container">
+<div class="row align-items-center">
+
+<!-- Left -->
+<div class="col-lg-5">
+<div class="pr-lg-5 mb-5 mb-lg-0 fade-left">
+
+<div class="feature-icon mb-4">
+<i class="icofont-doctor text-lg text-color"></i>
+</div>
+
+<h2 class="title-color mb-3">Why Choose Gani Hospital?</h2>
+
+<p class="mb-4">
+We provide trusted healthcare services with experienced doctors,
+modern facilities and patient-friendly treatment in Ramanathapuram.
+</p>
+
+<ul class="list-unstyled">
+<li class="mb-3">
+<i class="icofont-check-circled text-color mr-2"></i>
+Expert Doctors & Specialists
+</li>
+
+<li class="mb-3">
+<i class="icofont-check-circled text-color mr-2"></i>
+Fast & Easy Appointment Booking
+</li>
+
+<li class="mb-3">
+<i class="icofont-check-circled text-color mr-2"></i>
+Emergency Care Available
+</li>
+
+<li class="mb-3">
+<i class="icofont-check-circled text-color mr-2"></i>
+Affordable & Quality Treatment
+</li>
+</ul>
+
+<div class="mt-4">
+<span class="h5 d-block">Call for Emergency</span>
+<h3 class="text-color">+91 9444341253</h3>
+</div>
+
+</div>
+</div>
+
+<!-- Right -->
+<div class="col-lg-7">
+<div class="appoinment-wrap p-4 shadow rounded bg-white fade-right">
+
+<h2 class="mb-3 title-color">Book an Appointment</h2>
+
+<p class="mb-4">
+Fill in your details and send directly to WhatsApp.
+</p>
+
+<form class="appoinment-form" onsubmit="sendToWhatsApp(); return false;">
+
+<div class="row">
+
+<div class="col-md-6">
+<div class="form-group">
+<input type="text" class="form-control" id="patientname"
+placeholder="Patient Name" required>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<input type="tel" class="form-control" id="phone"
+placeholder="Phone Number" required>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<input type="date" class="form-control" id="date" required>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<input type="time" class="form-control" id="time" required>
+</div>
+</div>
+
+<div class="col-md-12">
+<div class="form-group">
+<textarea class="form-control" rows="2" id="address"
+placeholder="Address"></textarea>
+</div>
+</div>
+
+<div class="col-md-12">
+<div class="form-group">
+<textarea class="form-control" rows="3" id="message"
+placeholder="Describe your health issue / symptoms"></textarea>
+</div>
+</div>
+
+</div>
+
+<button type="submit" class="btn btn-main btn-round-full">
+Book Appointment
+<i class="icofont-simple-right ml-2"></i>
+</button>
+
+</form>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<div id="footer-container"></div>
+
+<script src="plugins/jquery/jquery.js"></script>
+<script src="plugins/bootstrap/js/popper.js"></script>
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+function sendToWhatsApp(){
+
+let patientname = document.getElementById("patientname").value;
+let phone = document.getElementById("phone").value;
+let date = document.getElementById("date").value;
+let time = document.getElementById("time").value;
+let address = document.getElementById("address").value;
+let message = document.getElementById("message").value;
+
+function convertTo12Hour(timeValue){
+
+    let parts = timeValue.split(":");
+    let hour = parseInt(parts[0]);
+    let minute = parts[1];
+
+    let ampm = hour >= 12 ? "PM" : "AM";
+
+    hour = hour % 12;
+    hour = hour ? hour : 12;
+
+    return hour + ":" + minute + " " + ampm;
+}
+
+let formattedTime = convertTo12Hour(time);
+
+let whatsappNumber = "8778856134";
+
+let text =
+`*New Appointment Booking*
+
+*Patient Name:* ${patientname}
+*Phone:* ${phone}
+*Date:* ${date}
+*Time:* ${formattedTime}
+*Address:* ${address}
+*Issue:* ${message}`;
+
+let url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
+
+window.open(url,"_blank");
+}
+</script>
+
+</body>
+</html>
