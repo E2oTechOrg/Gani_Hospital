@@ -52,7 +52,7 @@
 						<p id="desc" class="mb-4 pr-5"></p>
 
 						<div class="btn-container">
-							<a href="appoinment.html" target="_blank" class="btn btn-main-2 btn-icon btn-round-full">
+							<a href="appointment.html"  class="btn btn-main-2 btn-icon btn-round-full">
 								Make appointment
 							</a>
 						</div>
@@ -143,7 +143,7 @@
 							and trust.
 						</p>
 
-						<a href="service.html" class="btn btn-main-2 btn-round-full btn-icon">Services<i
+						<a href="about.html" class="btn btn-main-2 btn-round-full btn-icon">Read more<i
 								class="icofont-simple-right ml-3"></i></a>
 					</div>
 				</div>
@@ -334,95 +334,124 @@
 			</div>
 		</div>
 	</section>
-	<section class="section Appointment">
-		<div class="container fade-up">
-			<div class="row align-items-center">
-				<div class="col-lg-6 fade-left">
-					<div class="Appointment-content">
-						<img src="images/banner/home1.webp" alt="" class="img-fluid">
-						<!-- <div class="emergency">
-							<h2 class="text-lg"><i class="icofont-phone-circle text-lg"></i>94443 41253</h2>
-						</div> -->
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-10 fade-right">
-					<div class="Appointment-wrap mt-5 mt-lg-0">
-						<h2 class="mb-2 title-color">Book Appointment</h2>
-						
-						<p>
-							We provide high-quality healthcare services focused on safety, comfort, and successful treatment outcomes.
-						</p>
-						<form id="appointmentForm" method="post" action="#">
-							<div class="row">
-								<div class="col-lg-6">
-									<div class="form-group">
-										<select class="form-control" id="exampleFormControlSelect1">
-											<option>Choose Department</option>
-											<option>Software Design</option>
-											<option>Development cycle</option>
-											<option>Software Development</option>
-											<option>Maintenance</option>
-											<option>Process Query</option>
-											<option>Cost and Duration</option>
-											<option>Modal Delivery</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="form-group">
-										<select class="form-control" id="exampleFormControlSelect2">
-											<option>Select Doctors</option>
-											<option>Software Design</option>
-											<option>Development cycle</option>
-											<option>Software Development</option>
-											<option>Maintenance</option>
-											<option>Process Query</option>
-											<option>Cost and Duration</option>
-											<option>Modal Delivery</option>
-										</select>
-									</div>
-								</div>
+	<section class="appoinment section">
+<div class="container">
+<div class="row align-items-center">
 
-								<div class="col-lg-6">
-									<div class="form-group">
-										<input name="date" id="date" type="text" class="form-control"
-											placeholder="dd/mm/yyyy">
-									</div>
-								</div>
+<!-- Left -->
+<div class="col-lg-5">
+<div class="pr-lg-5 mb-5 mb-lg-0 fade-left">
 
-								<div class="col-lg-6">
-									<div class="form-group">
-										<input name="time" id="time" type="text" class="form-control"
-											placeholder="Time">
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="form-group">
-										<input name="name" id="name" type="text" class="form-control"
-											placeholder="Full Name">
-									</div>
-								</div>
+<div class="feature-icon mb-4">
+<i class="icofont-doctor text-lg text-color"></i>
+</div>
 
-								<div class="col-lg-6">
-									<div class="form-group">
-										<input name="phone" type="tel" class="form-control" 
-											placeholder="Phone Number">
-									</div>
-								</div>
-							</div>
-							<div class="form-group-2 mb-4">
-								<textarea name="message" id="message" class="form-control" rows="6"
-									placeholder="Your Message"></textarea>
-							</div>
+<h2 class="title-color mb-3">Why Choose Gani Hospital?</h2>
 
-							<a class="btn btn-main btn-round-full" href="appoinment.html">Make Appointment <i
-									class="icofont-simple-right ml-2  "></i></a>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+<p class="mb-4">
+We provide trusted healthcare services with experienced doctors,
+modern facilities and patient-friendly treatment in Ramanathapuram.
+</p>
+
+<ul class="list-unstyled">
+<li class="mb-3">
+<i class="icofont-check-circled text-color mr-2"></i>
+Expert Doctors & Specialists
+</li>
+
+<li class="mb-3">
+<i class="icofont-check-circled text-color mr-2"></i>
+Fast & Easy Appointment Booking
+</li>
+
+<li class="mb-3">
+<i class="icofont-check-circled text-color mr-2"></i>
+Emergency Care Available
+</li>
+
+<li class="mb-3">
+<i class="icofont-check-circled text-color mr-2"></i>
+Affordable & Quality Treatment
+</li>
+</ul>
+
+<div class="mt-4">
+<span class="h5 d-block">Call for Emergency</span>
+<h3 class="text-color">+91 9444341253</h3>
+</div>
+
+</div>
+</div>
+
+<!-- Right -->
+<div class="col-lg-7">
+<div class="appoinment-wrap p-4 shadow rounded bg-white fade-right">
+
+<h2 class="mb-3 title-color">Book an Appointment</h2>
+
+<p class="mb-4">
+Fill in your details and send directly to WhatsApp.
+</p>
+
+<form class="appoinment-form" onsubmit="sendToWhatsApp(); return false;">
+
+<div class="row">
+
+<div class="col-md-6">
+<div class="form-group">
+<input type="text" class="form-control" id="patientname"
+placeholder="Patient Name" required>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<input type="tel" class="form-control" id="phone"
+placeholder="Phone Number" required>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<input type="date" class="form-control" id="date" required>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+<input type="time" class="form-control" id="time" required>
+</div>
+</div>
+
+<div class="col-md-12">
+<div class="form-group">
+<textarea class="form-control" rows="2" id="address"
+placeholder="Address"></textarea>
+</div>
+</div>
+
+<div class="col-md-12">
+<div class="form-group">
+<textarea class="form-control" rows="3" id="message"
+placeholder="Describe your health issue / symptoms"></textarea>
+</div>
+</div>
+
+</div>
+
+<button type="submit" class="btn btn-main btn-round-full">
+Book Appointment
+<i class="icofont-simple-right ml-2"></i>
+</button>
+
+</form>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
 
 <section class="blog-section fade-up" id="blogSection">
   <span class="blog-tag-line">Health Blog</span>
@@ -634,6 +663,25 @@
 			</a>
 		</div>
 	</div>
+</div>
+
+<div class="blog-card">
+    <div class="bc-img surgery-bg">
+        <img src="images/service/Pharmacy.jpg"
+             alt="24/7 Pharmacy in Ramanathapuram Emergency Medicine Partner"
+             title="24/7 Pharmacy in Ramanathapuram">
+        <span class="bc-badge badge-surgery">Pharmacy</span>
+    </div>
+
+    <div class="bc-body">
+        <h3>24/7 Pharmacy in Ramanathapuram: Your Emergency Medicine Partner</h3>
+
+        <div class="bc-meta">
+            <span class="bc-time">5 min read</span>
+            <a href="pharmacy.html"
+               class="bc-link link-surgery">Read more &rarr;</a>
+        </div>
+    </div>
 </div>
 
     </div>
@@ -854,6 +902,49 @@
 	<script src="js/video.js"></script>
 	<script src="js/contact.js"></script>
 	<script src="js/counter.js"></script>
+	<script>
+function sendToWhatsApp(){
+
+let patientname = document.getElementById("patientname").value;
+let phone = document.getElementById("phone").value;
+let date = document.getElementById("date").value;
+let time = document.getElementById("time").value;
+let address = document.getElementById("address").value;
+let message = document.getElementById("message").value;
+
+function convertTo12Hour(timeValue){
+
+    let parts = timeValue.split(":");
+    let hour = parseInt(parts[0]);
+    let minute = parts[1];
+
+    let ampm = hour >= 12 ? "PM" : "AM";
+
+    hour = hour % 12;
+    hour = hour ? hour : 12;
+
+    return hour + ":" + minute + " " + ampm;
+}
+
+let formattedTime = convertTo12Hour(time);
+
+let whatsappNumber = "8778856134";
+
+let text =
+`*New Appointment Booking*
+
+*Patient Name:* ${patientname}
+*Phone:* ${phone}
+*Date:* ${date}
+*Time:* ${formattedTime}
+*Address:* ${address}
+*Issue:* ${message}`;
+
+let url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(text);
+
+window.open(url,"_blank");
+}
+</script>
 	<script>
 const grid = document.getElementById('blogGrid');
 const dotsEl = document.getElementById('carouselDots');
