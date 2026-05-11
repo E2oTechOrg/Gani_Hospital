@@ -3,18 +3,21 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Gani Hospital Ramanathapuram | Pregnancy Care, Kids Care & Surgery</title>
+<meta name="title" content="Gani Hospitals Ramanathapuram | Pregnancy Care, Kids Care & Surgery">
+<meta name="description" content="Gani Hospitals in Ramanathapuram provides expert pregnancy care, child healthcare, advanced laparoscopic surgeries, diagnostics, emergency treatment, and online appointment booking with experienced doctors.">
 
-	<meta name="description" content="Gani Hospital in Ramanathapuram provides expert pregnancy care, pediatric (kids) treatment, and advanced surgical services with 24/7 emergency support and online appointment booking.">
+<meta name="keywords" content="Gani Hospital Ramanathapuram, best hospital in Ramanathapuram, pregnancy care hospital Ramnad, maternity hospital Ramanathapuram, kids hospital Ramnad, pediatric care Ramanathapuram, surgery hospital Ramanathapuram, laparoscopic surgery Ramnad, emergency hospital Ramanathapuram, online appointment Gani Hospital">
 
-	<meta name="keywords" content="Gani Hospital Ramanathapuram, Pregnancy care hospital, Kids hospital, Pediatric care, Surgery hospital Ramanathapuram, maternity hospital, child specialist, emergency hospital">
+<meta name="author" content="Gani Hospitals">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
 
-	<meta name="author" content="Gani Hospital">
+<title>Gani Hospitals Ramanathapuram | Pregnancy Care, Kids Care & Surgery</title>
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="/images/ganilogo(1).jpeg" />
 
 	<!-- bootstrap.min css -->
 	<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
@@ -248,10 +251,14 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-7 text-center">
 					<div class="section-title fade-up">
-						<h2>Award winning patient care</h2>
+						<h2>Expert Healthcare Services</h2>
 						<div class="divider mx-auto my-4"></div>
-						<p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt
-							molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
+					
+						<p>
+							Discover our trusted medical services including pregnancy care, child care, 
+							advanced surgeries, scan & imaging, laboratory diagnostics, and emergency treatment.
+							Gani Hospitals is committed to safe, affordable, and patient-focused healthcare.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -889,10 +896,10 @@ Book Appointment
 	<!-- Slick Slider -->
 	<script src="plugins/slick-carousel/slick/slick.min.js"></script>
 	<!-- Counterup -->
-	<!-- <script src="plugins/counterup/jquery.waypoints.min.js"></script> -->
+	<script src="plugins/counterup/jquery.waypoints.min.js"></script>
 
 	<script src="plugins/shuffle/shuffle.min.js"></script>
-	<!-- <script src="plugins/counterup/jquery.counterup.min.js"></script> -->
+	<script src="plugins/counterup/jquery.counterup.min.js"></script>
 	<!-- Google Map -->
 	<!-- <script src="plugins/google-map/map.js"></script>
 	<script
@@ -949,8 +956,18 @@ window.open(url,"_blank");
 const grid = document.getElementById('blogGrid');
 const dotsEl = document.getElementById('carouselDots');
 const cards = grid.querySelectorAll('.blog-card');
-const cardW = 260;
+
 let current = 0;
+
+function getVisibleCards() {
+  if (window.innerWidth <= 576) return 1;
+  if (window.innerWidth <= 991) return 2;
+  return 3;
+}
+
+function getCardWidth() {
+  return cards[0].offsetWidth + 20; // card + gap
+}
 
 cards.forEach((_, i) => {
   const d = document.createElement('div');
@@ -960,21 +977,34 @@ cards.forEach((_, i) => {
 });
 
 function updateDots() {
-  dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  dotsEl.querySelectorAll('.dot').forEach((d, i) => {
+    d.classList.toggle('active', i === current);
+  });
 }
 
 function goTo(i) {
-  current = Math.max(0, Math.min(i, cards.length - 1));
-  grid.scrollTo({ left: current * cardW, behavior: 'smooth' });
+  const visible = getVisibleCards();
+  const max = cards.length - visible;
+
+  current = Math.max(0, Math.min(i, max));
+
+  grid.scrollTo({
+    left: current * getCardWidth(),
+    behavior: 'smooth'
+  });
+
   updateDots();
 }
 
-document.getElementById('prevBtn').onclick = () => goTo(current - 1);
-document.getElementById('nextBtn').onclick = () => goTo(current + 1);
-grid.addEventListener('scroll', () => {
-  current = Math.round(grid.scrollLeft / cardW);
-  updateDots();
-});
+document.getElementById('nextBtn').onclick = () => {
+  goTo(current + getVisibleCards());
+};
+
+document.getElementById('prevBtn').onclick = () => {
+  goTo(current - getVisibleCards());
+};
+
+window.addEventListener('resize', () => goTo(current));
 </script>
 
 </body>
