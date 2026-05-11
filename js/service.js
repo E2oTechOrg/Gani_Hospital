@@ -14,8 +14,8 @@ const data = {
 
         about: "Our Pregnancy Care department offers complete maternity support from early pregnancy to safe delivery and postnatal recovery. We focus on mother and baby wellness through expert gynecologists, regular monitoring, and compassionate care.",
 
-        facilities: "We provide antenatal checkups, fetal growth scans, nutrition counseling, high-risk pregnancy management, labor room support, normal delivery assistance, and post-delivery care in a safe and modern environment.",
-
+        facilities: "We provide complete maternity services including regular antenatal checkups, fetal growth monitoring scans, nutrition and lifestyle counseling, blood pressure and diabetes monitoring, high-risk pregnancy management, labor room assistance, normal and cesarean delivery support, newborn care, breastfeeding guidance, and post-delivery recovery care in a safe and modern hospital environment.",
+        
         facilityItems: [
             "Regular Antenatal Checkups",
             "Pregnancy Scans & Monitoring",
@@ -37,8 +37,7 @@ const data = {
 
         about: "Our Kids Care department provides specialized treatment for newborns, infants, and children. We focus on preventive care, growth monitoring, vaccinations, and treatment of childhood illnesses in a child-friendly environment.",
 
-        facilities: "The pediatric unit includes vaccination clinics, child emergency care, nutrition counseling, developmental assessments, fever care, infection treatment, and regular child wellness consultations.",
-
+        facilities: "Our pediatric unit offers vaccination programs, newborn care, child emergency treatment, fever and infection management, growth and developmental assessments, nutrition counseling, allergy care, asthma management, infant wellness checkups, and regular pediatric consultations in a child-friendly atmosphere.",
         facilityItems: [
             "Vaccination Programs",
             "Growth Monitoring",
@@ -60,8 +59,7 @@ const data = {
 
         about: "Gani Hospitals is known for advanced laparoscopic and general surgeries with modern surgical techniques. Our expert surgeons ensure safe treatment, minimal pain, small incisions, and faster recovery.",
 
-        facilities: "We perform appendix surgery, gallbladder surgery, hernia repair, piles treatment, diagnostic laparoscopy, emergency surgeries, and other general procedures using advanced equipment.",
-
+        facilities: "We perform advanced laparoscopic and general surgeries including appendix removal, gallbladder surgery, hernia repair, piles treatment, fissure and fistula care, diagnostic laparoscopy, cyst removal, emergency surgical procedures, wound management, and post-surgical recovery support using modern equipment.",
         facilityItems: [
             "Laparoscopic Surgery",
             "Appendix Surgery",
@@ -83,8 +81,7 @@ const data = {
 
         about: "Our Scan & Imaging department provides accurate diagnostic imaging using modern scanning systems for quick and reliable medical decisions.",
 
-        facilities: "We offer ultrasound scans, pregnancy scans, abdominal scans, pelvic scans, and other imaging services with expert radiology support.",
-
+        facilities: "We offer accurate and timely imaging services including ultrasound scan, pregnancy scan, abdominal scan, pelvic scan, thyroid scan, breast scan, Doppler scan, soft tissue scan, guided diagnostic imaging, digital reporting, and expert radiology consultation for proper diagnosis.",
         facilityItems: [
             "Ultrasound Scan",
             "Pregnancy Scan",
@@ -106,8 +103,7 @@ const data = {
 
         about: "Our Laboratory Services provide reliable diagnostic testing with modern equipment and trained technicians for fast and accurate results.",
 
-        facilities: "We offer blood tests, urine tests, sugar tests, thyroid tests, infection screening, and complete health profile packages.",
-
+       facilities: "Our laboratory provides a wide range of diagnostic tests including complete blood count, urine analysis, blood sugar testing, thyroid profile, liver function test, kidney function test, cholesterol profile, infection screening, pregnancy tests, hormone testing, and complete preventive health packages with quick reporting.",
         facilityItems: [
             "Blood Test",
             "Urine Analysis",
@@ -129,8 +125,7 @@ const data = {
 
         about: "Our Emergency Care unit provides immediate treatment for accidents, fever, breathing issues, chest pain, injuries, and urgent medical conditions any time of the day.",
 
-        facilities: "We offer emergency doctor consultation, first aid, oxygen support, observation beds, trauma response, ambulance coordination, and critical stabilization care.",
-
+        facilities: "Our 24/7 emergency unit provides immediate medical attention for accidents, injuries, fever, dehydration, breathing difficulty, chest pain, vomiting, trauma cases, emergency injections, oxygen support, observation beds, ambulance coordination, critical stabilization, and urgent doctor consultation at any time.",
         facilityItems: [
             "24/7 Doctor Availability",
             "Emergency First Aid",

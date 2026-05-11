@@ -415,42 +415,39 @@ document.querySelectorAll('.fade-up, .fade-left, .fade-right')
 	};
 
 	// ✅ LOAD DATA
-	if (dept && data[dept]) {
-		const d = data[dept];
+	if (document.getElementById("deptTitle")) {
 
-		// Page hero title
-		document.getElementById("deptTitle").innerText = d.title;
+    if (dept && data[dept]) {
+        const d = data[dept];
 
-		// Content section heading
-		document.getElementById("deptHeading").innerText = d.title;
+        document.getElementById("deptTitle").innerText = d.title;
+        document.getElementById("deptHeading").innerText = d.title;
+        document.getElementById("deptImg").src = d.img;
+        document.getElementById("deptImg").alt = d.title;
+        document.getElementById("deptDesc").innerText = d.desc;
 
-		// Main image
-		document.getElementById("deptImg").src = d.img;
-		document.getElementById("deptImg").alt = d.title;
+        const aboutContainer = document.getElementById("deptAbout");
+        aboutContainer.innerHTML = "";
 
-		// Short description
-		document.getElementById("deptDesc").innerText = d.desc;
+        d.about.forEach(function (para) {
+            aboutContainer.innerHTML += `<p class="mb-3">${para}</p>`;
+        });
 
-		// About paragraphs
-		const aboutContainer = document.getElementById("deptAbout");
-		aboutContainer.innerHTML = "";
-		d.about.forEach(function (para) {
-			aboutContainer.innerHTML += `<p class="mb-3">${para}</p>`;
-		});
+        const list = document.getElementById("deptFeatures");
+        list.innerHTML = "";
 
-		// Features list
-		const list = document.getElementById("deptFeatures");
-		list.innerHTML = "";
-		d.features.forEach(function (f) {
-			list.innerHTML += `<li><i class="icofont-check mr-2"></i>${f}</li>`;
-		});
+        d.features.forEach(function (f) {
+            list.innerHTML += `<li><i class="icofont-check mr-2"></i>${f}</li>`;
+        });
 
-	} else {
-		document.getElementById("deptTitle").innerText = "Department Not Found";
-		document.getElementById("deptHeading").innerText = "Department Not Found";
-		document.getElementById("deptDesc").innerText = "Please go back and select a valid department.";
-		document.getElementById("deptImg").style.display = "none";
-	}
+    } else {
+        document.getElementById("deptTitle").innerText = "Department Not Found";
+        document.getElementById("deptHeading").innerText = "Department Not Found";
+        document.getElementById("deptDesc").innerText = "Please go back and select valid department.";
+        document.getElementById("deptImg").style.display = "none";
+    }
+
+}
 
 
 	/* =============================================
@@ -486,10 +483,14 @@ document.querySelectorAll('.fade-up, .fade-left, .fade-right')
 	var Shuffle = window.Shuffle;
 	var jQuery = window.jQuery;
 
-	var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
-		itemSelector: '.shuffle-item',
-		buffer: 1
-	});
+	var shuffleElement = document.querySelector('.shuffle-wrapper');
+
+if (shuffleElement) {
+    var myShuffle = new Shuffle(shuffleElement, {
+        itemSelector: '.shuffle-item',
+        buffer: 1
+    });
+}
 
 	jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
 		var input = evt.currentTarget;
